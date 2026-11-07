@@ -8,6 +8,10 @@
 
 > 本项目与上游 Answer me with HTML 无隶属关系，只是按 MIT 许可内置其渲染器（`skill/`）。上游版本固定为 **v0.5.11**。
 
+![示例页面：TCP 三次握手](docs/screenshot.png)
+
+<sub>示例：模型只写 Markdown 草稿，插件渲染出的单页 HTML（深色模式、自动布局的顺序图与流程图）。</sub>
+
 ## 特性
 
 - **原生工具**：`answer_me_with_html`，不再依赖 bash/pwsh 和 heredoc，Windows 端也不会被 PowerShell 语法卡住。

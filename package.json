@@ -35,6 +35,7 @@
     "lib",
     "skill",
     "locale",
+    "docs/screenshot.png",
     "icon.svg",
     "cordis.patch.yml",
     "README.md",

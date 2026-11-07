@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Upstream Answer me with HTML
+    url: https://github.com/QingYunA/answer-me-with-html
+    about: Ask about the renderer, draft syntax or themes in the upstream project.
