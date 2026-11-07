@@ -22,6 +22,15 @@
 - **可离线安装**：本地目录安装，不需要联网、不需要 pnpm 构建步骤。
 - **可选 always-on**：配置 `alwaysOn: true` 后，通过系统提示要求每个结论都附带一页小页面。
 
+## 与 dsh-genui 的关系
+
+[dsh-genui](https://github.com/omdsh-dev/dsh-genui) 与本插件是同一目标下的两种形态，**可以同时安装，但不要用两者重复表达同一件事**：
+
+- **短小、可交互的界面**（表格排序/过滤、表单、测验、图表、音视频、按钮动作回环、常驻面板）→ 用 dsh-genui 的 `dsh-ui` 围栏。
+- **长篇解释、图多的说明页、需要打印/PDF/离线单文件归档、希望在右侧 Document Preview 阅读** → 用本插件的 `answer_me_with_html`。
+
+同一回答不要同时产出页面与内联组件。完整对比、共存验证计划和后续路线见 [docs/dsh-genui-evaluation.md](docs/dsh-genui-evaluation.md)。
+
 ## 安装
 
 要求：DSH `0.2.1-rc.2` 或 `0.2.2-rc.1`（`>0.3.0` 之前），桌面端与 Web 端各装一次。
