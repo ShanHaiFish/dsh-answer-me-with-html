@@ -1,5 +1,9 @@
 # dsh-answer-me-with-html
 
+[![CI](https://github.com/ShanHaiFish/dsh-answer-me-with-html/actions/workflows/test.yml/badge.svg)](https://github.com/ShanHaiFish/dsh-answer-me-with-html/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/ShanHaiFish/dsh-answer-me-with-html)](https://github.com/ShanHaiFish/dsh-answer-me-with-html/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 把 [Answer me with HTML](https://github.com/QingYunA/answer-me-with-html) 的原生体验带进 DeepSeek Harness（DSH）：模型只写 Markdown 草稿，插件在本地渲染成一页离线 HTML，并把页面放到右侧 Document Preview 里打开。Web 端和桌面端使用同一份插件。
 
 > 本项目与上游 Answer me with HTML 无隶属关系，只是按 MIT 许可内置其渲染器（`skill/`）。上游版本固定为 **v0.5.11**。
@@ -18,29 +22,27 @@
 
 要求：DSH `0.2.1-rc.2` 或 `0.2.2-rc.1`（`>0.3.0` 之前），桌面端与 Web 端各装一次。
 
-### 桌面端
+从 GitHub 安装（推荐）：
 
-在 DSH 的 **Plugins** 页 → **Add plugin**，填入本目录的绝对路径，例如：
+- 在 DSH 的 **Plugins** 页 → **Add plugin**，填入：
 
-```
-F:\path\to\dsh-answer-me-with-html
-```
+  ```
+  github:ShanHaiFish/dsh-answer-me-with-html
+  ```
 
-或使用 CLI：
+- 或用 CLI：
 
-```powershell
-dsh plugin --profile desktop add "F:\path\to\dsh-answer-me-with-html"
-```
+  ```powershell
+  dsh plugin --profile desktop add github:ShanHaiFish/dsh-answer-me-with-html
+  dsh plugin --profile web add github:ShanHaiFish/dsh-answer-me-with-html
+  ```
 
-### Web 端
+本地开发安装（无需联网，适合调试本仓库）：
 
-在 Web UI 的 **Plugins** 页做同样的操作，或：
+- Plugins 页 → Add plugin，填入本目录的绝对路径，例如 `F:\path\to\dsh-answer-me-with-html`；
+- 或 CLI：`dsh plugin --profile desktop add "F:\path\to\dsh-answer-me-with-html"`。
 
-```powershell
-dsh plugin --profile web add "F:\path\to\dsh-answer-me-with-html"
-```
-
-安装后新开一个会话，问一个适合画图解释的问题（例如“解释 TCP 三次握手”），模型会调用 `answer_me_with_html`，会话中出现页面卡片。
+安装后新开一个会话，问一个适合画图解释的问题（例如“解释 TCP 三次握手”），模型会调用 `answer_me_with_html`，会话中出现页面卡片。发布页见 [Releases](https://github.com/ShanHaiFish/dsh-answer-me-with-html/releases)。
 
 > 不要同时安装上游 `answer-me-with-html` 和我们这个插件，否则会出现两份同名 skill。二选一。
 

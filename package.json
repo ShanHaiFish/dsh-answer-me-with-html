@@ -57,5 +57,13 @@
     "explainer"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShanHaiFish/dsh-answer-me-with-html.git"
+  },
+  "homepage": "https://github.com/ShanHaiFish/dsh-answer-me-with-html#readme",
+  "bugs": {
+    "url": "https://github.com/ShanHaiFish/dsh-answer-me-with-html/issues"
+  },
   "private": true
 }
