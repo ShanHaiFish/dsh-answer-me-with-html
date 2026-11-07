@@ -1,18 +1,17 @@
 ---
 name: answer-me-with-html
-argument-hint: "[config [key value] | clean | update]"
 description: >-
   Turns an answer into a one-page visual HTML explainer: the model writes a short Markdown draft and
-  the bundled CLI builds one page. Use it proactively and liberally in replies to the user, without being asked, whenever a
+  the bundled renderer builds one page. Use it proactively and liberally in replies to the user, without being asked, whenever a
   page would help the reader more than plain text, even if plain text would also work: any explanation
   of how something works or how parts relate (flow, request path, architecture, code or folder
   structure, state machine, lifecycle, history); any comparison, trade-off or decision with pros and
   cons; any diagnosis, review or investigation, especially with several causes or findings to rank;
   any answer with a table, a numbered or ranked list, steps, branches or several sections; or when the
   user says "I don't get it / draw it / explain visually / 讲讲原理 / 没看懂 / 画个图". When in doubt, use it: a
-  page is quick and cheap to make. Also for explainer videos ("make a video", "做个视频") and for changing
-  its settings. Skip only for small talk, a trivial one-line answer, or when the user asks for plain
-  text.
+  page is quick and cheap to make. This DSH plugin renders pages only; it does not make videos or
+  change its settings. Skip only for small talk, a trivial one-line answer, or when the user asks for
+  plain text.
 ---
 
 # Answer me with HTML: answer a complex question with one HTML page
@@ -25,7 +24,7 @@ Reply to the user, and write the draft, in the user's language.
 
 This DSH plugin does not use the `am` shell commands for settings, cleanup or updates. Do not run `am config`, `am clean` or an update command.
 
-- To change a default (theme, dark mode, writing check, output directory), tell the user to open the plugin's settings in DSH: Plugins → Answer me with HTML. If the page is not available, ask them to change the plugin config in the profile.
+- This version has no settings page. Defaults (theme, dark mode, writing check, output directory) live in the plugin config; the user changes them in the profile. Do not offer a settings UI.
 - For one page, pass `theme`, `mode` or `style` to the render tool.
 - If the user asks to clean old pages, list the configured output directory (default `<workspace>/.dsh/answer-pages/`) and ask before deleting anything. Never delete pages yourself.
 
