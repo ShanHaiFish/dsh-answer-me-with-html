@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Answer me with HTML",
+    "description": "把回答渲染成单页 HTML 说明页，并在右侧文档预览中打开，Web 端与桌面端都可用。"
+  }
+}

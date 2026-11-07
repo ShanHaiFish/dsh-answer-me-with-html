@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+.tmp-*/
+.dsh/
+.acl-recovery/
+*.tgz
+*.log
+.DS_Store
+Thumbs.db

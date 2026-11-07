@@ -1,0 +1,26 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Syntax check
+        run: |
+          node --check lib/host.js
+          node --check lib/renderer.js
+          node --check lib/node-runtime.js
+          node --check lib/client.js
+      - name: Unit tests
+        run: node --test test/renderer.test.mjs test/client.test.mjs
