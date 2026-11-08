@@ -1,6 +1,6 @@
 {
   "name": "dsh-answer-me-with-html",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Answer me with HTML for DeepSeek Harness: a native tool, DSH-adapted skill, and tool card that render answers as one-page HTML explainers and open them in the Document Preview on Web and Desktop.",
   "type": "module",
   "main": "lib/host.js",

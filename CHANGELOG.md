@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.1.1 — 2026-11-08
+
+- Skill: add a division-of-labor rule for coexisting with `dsh-genui` — use its inline
+  `dsh-ui` fence for compact interactive UI, keep `answer_me_with_html` for long-form or
+  offline pages, and never use both for one answer.
+- Docs: add the dsh-genui comparison and coexistence evaluation.
+
 ## 0.1.0 — 2026-11-08
 
 First working version.

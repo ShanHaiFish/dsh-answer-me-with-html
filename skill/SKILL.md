@@ -10,7 +10,9 @@ description: >-
   any answer with a table, a numbered or ranked list, steps, branches or several sections; or when the
   user says "I don't get it / draw it / explain visually / 讲讲原理 / 没看懂 / 画个图". When in doubt, use it: a
   page is quick and cheap to make. This DSH plugin renders pages only; it does not make videos or
-  change its settings. Skip only for small talk, a trivial one-line answer, or when the user asks for
+  change its settings. When the `genui` skill is available, prefer its inline `dsh-ui` fence for
+  compact interactive UI and keep this page tool for long-form or offline pages; never use both for
+  one answer. Skip only for small talk, a trivial one-line answer, or when the user asks for
   plain text.
 ---
 
@@ -29,6 +31,14 @@ This DSH plugin does not use the `am` shell commands for settings, cleanup or up
 - If the user asks to clean old pages, list the configured output directory (default `<workspace>/.dsh/answer-pages/`) and ask before deleting anything. Never delete pages yourself.
 
 ## 1. Decide: produce a page or not
+
+### When the `genui` skill is available
+
+If this session also has the `genui` skill, pick exactly one surface per answer:
+
+- **Use GenUI's `dsh-ui` fence** for compact, interactive UI: dashboards, sortable or filterable tables, forms, quizzes, charts with local controls, media, or a decision whose buttons send an action back to the model.
+- **Use `answer_me_with_html`** for long-form explanations, diagram-heavy pages, and pages that must be printed, exported, or archived offline.
+- **Never use both for the same answer.** Do not call the tool and also emit a `dsh-ui` fence that repeats the same content.
 
 Produce a page if any of these is true:
 - There are ≥3 interrelated concepts, and the reader needs to see how they relate.

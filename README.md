@@ -29,7 +29,7 @@
 - **短小、可交互的界面**（表格排序/过滤、表单、测验、图表、音视频、按钮动作回环、常驻面板）→ 用 dsh-genui 的 `dsh-ui` 围栏。
 - **长篇解释、图多的说明页、需要打印/PDF/离线单文件归档、希望在右侧 Document Preview 阅读** → 用本插件的 `answer_me_with_html`。
 
-同一回答不要同时产出页面与内联组件。完整对比、共存验证计划和后续路线见 [docs/dsh-genui-evaluation.md](docs/dsh-genui-evaluation.md)。
+同一回答不要同时产出页面与内联组件。该分工规则已内置在 skill 中（v0.1.1+）。完整对比、共存验证计划和后续路线见 [docs/dsh-genui-evaluation.md](docs/dsh-genui-evaluation.md)。
 
 ## 安装
 
