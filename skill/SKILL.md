@@ -1,5 +1,5 @@
 ---
-name: answer-me-with-html
+name: answer-pages
 description: >-
   Turns an answer into a one-page visual HTML explainer: the model writes a short Markdown draft and
   the bundled renderer builds one page. Use it proactively and liberally in replies to the user, without being asked, whenever a
@@ -16,7 +16,7 @@ description: >-
   plain text.
 ---
 
-# Answer me with HTML: answer a complex question with one HTML page
+# Answer pages: answer a complex question with one HTML page
 
 You write only the **content draft** (extended Markdown). The plugin's renderer does all layout, colours, dark mode and diagram coordinates. **Do not hand-write HTML / CSS / SVG.**
 
@@ -57,7 +57,7 @@ Automatic pages are for replies to the user. An internal report returned to anot
 
 ### Always-on mode
 
-If the context contains the `[answer-me-with-html always-on]` reminder (the user added the always-on rule to a rules file such as `CLAUDE.md` or `AGENTS.md`), the bar is lower:
+If the context contains the `[answer-pages always-on]` reminder (the user added the always-on rule to a rules file such as `CLAUDE.md` or `AGENTS.md`), the bar is lower:
 
 - Whenever this turn gives a conclusion, summary, plan, comparison, review or explanation, attach a page.
 - Do not skip it because "the answer is short". If there is a conclusion, produce a page.

@@ -1,7 +1,7 @@
 {
-  "name": "dsh-answer-me-with-html",
-  "version": "0.1.1",
-  "description": "Answer me with HTML for DeepSeek Harness: a native tool, DSH-adapted skill, and tool card that render answers as one-page HTML explainers and open them in the Document Preview on Web and Desktop.",
+  "name": "dsh-answer-pages",
+  "version": "0.2.0",
+  "description": "Answer pages for DeepSeek Harness: a native tool, DSH-adapted skill and tool card that render answers as one-page HTML explainers (powered by Answer me with HTML) and open them in the Document Preview on Web and Desktop.",
   "type": "module",
   "main": "lib/host.js",
   "exports": {
@@ -54,6 +54,7 @@
     "deepseek-harness",
     "dsh",
     "dsh-plugin",
+    "answer-pages",
     "answer-me-with-html",
     "html",
     "explainer"
@@ -61,11 +62,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShanHaiFish/dsh-answer-me-with-html.git"
+    "url": "git+https://github.com/ShanHaiFish/dsh-answer-pages.git"
   },
-  "homepage": "https://github.com/ShanHaiFish/dsh-answer-me-with-html#readme",
+  "homepage": "https://github.com/ShanHaiFish/dsh-answer-pages#readme",
   "bugs": {
-    "url": "https://github.com/ShanHaiFish/dsh-answer-me-with-html/issues"
+    "url": "https://github.com/ShanHaiFish/dsh-answer-pages/issues"
   },
   "private": true
 }

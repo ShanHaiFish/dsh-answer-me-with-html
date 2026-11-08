@@ -1,16 +1,16 @@
-# dsh-answer-me-with-html bundle patch.
+# dsh-answer-pages bundle patch.
 #
 # Two rows:
-#   - answer-me-with-html       our Host plugin: registers the `answer_me_with_html`
-#                               tool and (optionally) the always-on prompt section.
-#   - answer-me-with-html-skill mounts the bundled skill/ directory through the
-#                               shipped filesystem skill provider.
+#   - answer-pages       our Host plugin: registers the `answer_me_with_html`
+#                        tool and (optionally) the always-on prompt section.
+#   - answer-pages-skill mounts the bundled skill/ directory through the
+#                        shipped filesystem skill provider.
 #
 # The skill row resolves this package from the profile's node_modules, so the
 # bundledSkillDir expression never depends on the process working directory.
 - insert:
-    - id: answer-me-with-html
-      name: dsh-answer-me-with-html
+    - id: answer-pages
+      name: dsh-answer-pages
       config:
         outputDir: ''
         theme: auto
@@ -19,9 +19,9 @@
         alwaysOn: false
         nodePath: ''
         maxDraftBytes: 200000
-    - id: answer-me-with-html-skill
+    - id: answer-pages-skill
       name: '@deepseek-ai/dsh-skill-filesystem'
       config:
-        providerName: answer-me-with-html
+        providerName: answer-pages
         includeDefaultRoots: false
-        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('dsh-answer-me-with-html/package.json')), 'skill')
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('dsh-answer-pages/package.json')), 'skill')

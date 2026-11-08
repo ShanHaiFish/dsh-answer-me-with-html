@@ -24,8 +24,9 @@ This repository is a DeepSeek Harness (DSH) static bundle plugin. Keep changes s
 ## Install for local testing
 
 ```powershell
-dsh plugin --profile desktop add "F:\path\to\dsh-answer-me-with-html"
-dsh plugin --profile web add "F:\path\to\dsh-answer-me-with-html"
+dsh plugin --profile desktop add "F:\path\to\dsh-answer-pages"
+dsh plugin --profile web add "F:\path\to\dsh-answer-pages"
 ```
 
 Or use the Plugins page in the app and enter the absolute directory.
+

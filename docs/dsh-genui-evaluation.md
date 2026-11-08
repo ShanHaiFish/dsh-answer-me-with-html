@@ -22,12 +22,12 @@
 
 ## 2. 本插件是什么
 
-`dsh-answer-me-with-html` v0.1.0：模型写一份扩展 Markdown 草稿，Host 工具调用内置的 `am.mjs` **服务端渲染**成一页离线 HTML，页面落在会话工作区 `.dsh/answer-pages/`，用户在右侧 Document Preview 打开；工具卡显示标题、警告与错误。
+`dsh-answer-pages` v0.1.0：模型写一份扩展 Markdown 草稿，Host 工具调用内置的 `am.mjs` **服务端渲染**成一页离线 HTML，页面落在会话工作区 `.dsh/answer-pages/`，用户在右侧 Document Preview 打开；工具卡显示标题、警告与错误。
 
 - 输出：单个自包含 HTML 文件（可移植、可归档、可打印）。
 - 交互：页面内主题/明暗切换、面板评论、`ask`、Reply（复制到剪贴板）。
 - 依赖：仅 Node（桌面端用 Electron 自带 Node），渲染器 1 MB 左右。
-- 安装：`github:ShanHaiFish/dsh-answer-me-with-html`，或本地目录。
+- 安装：`github:ShanHaiFish/dsh-answer-pages`，或本地目录。
 
 ## 3. 对比矩阵
 
@@ -135,3 +135,4 @@
 - 其组件语法：<https://github.com/omdsh-dev/dsh-genui/blob/main/SKILL.md>
 - 其 npm 包：<https://www.npmjs.com/package/@changfenhuang/dsh-genui>
 - 上游 Answer me with HTML：<https://github.com/QingYunA/answer-me-with-html>
+

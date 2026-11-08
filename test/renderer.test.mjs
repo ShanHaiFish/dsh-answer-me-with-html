@@ -45,7 +45,7 @@ test('renders a draft into the workspace output directory', async () => {
     const html = await readFile(result.path, 'utf8')
     assert.match(html, /<html/i)
     assert.match(html, /Test Page/)
-    assert.ok(existsSync(path.join(cwd, '.dsh', 'answer-me-with-html', 'config.json')))
+    assert.ok(existsSync(path.join(cwd, '.dsh', 'answer-pages-home', 'config.json')))
   })
 })
 
@@ -142,3 +142,4 @@ test('ignores unknown config keys and validates known ones', () => {
 
 // Keep `writeFile` imported for future fixtures without failing lint-style checks.
 void writeFile
+

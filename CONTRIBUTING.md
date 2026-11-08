@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve `dsh-answer-me-with-html`.
+Thanks for helping improve `dsh-answer-pages`.
 
 ## Development
 
@@ -20,8 +20,8 @@ node --test test/renderer.test.mjs test/client.test.mjs
 Install the working copy into a profile for manual testing:
 
 ```powershell
-dsh plugin --profile desktop add "F:\path\to\dsh-answer-me-with-html"
-dsh plugin --profile web add "F:\path\to\dsh-answer-me-with-html"
+dsh plugin --profile desktop add "F:\path\to\dsh-answer-pages"
+dsh plugin --profile web add "F:\path\to\dsh-answer-pages"
 ```
 
 ## Updating the bundled renderer
@@ -53,3 +53,4 @@ the DSH workflow (native tool, no shell, Document Preview links).
 Describe what changed and how it was verified. Screenshots are welcome for UI
 changes. By contributing you agree your changes are licensed under the MIT
 License.
+

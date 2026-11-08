@@ -21,7 +21,7 @@ async function loadClientBundle() {
   await import(url.href)
 
   assert.ok(loaded, 'client bundle did not call window.__ModuleLoader__.load')
-  assert.equal(loaded.id, 'dsh-answer-me-with-html')
+  assert.equal(loaded.id, 'dsh-answer-pages')
 
   /** @type {any} */
   const React = {
@@ -144,3 +144,4 @@ test('preparing card reads the draft title while arguments stream', async () => 
 
   assert.match(textOf(card), /Streaming title/)
 })
+

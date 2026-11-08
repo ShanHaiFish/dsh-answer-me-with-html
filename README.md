@@ -1,7 +1,7 @@
-# dsh-answer-me-with-html
+# dsh-answer-pages
 
-[![CI](https://github.com/ShanHaiFish/dsh-answer-me-with-html/actions/workflows/test.yml/badge.svg)](https://github.com/ShanHaiFish/dsh-answer-me-with-html/actions/workflows/test.yml)
-[![Release](https://img.shields.io/github/v/release/ShanHaiFish/dsh-answer-me-with-html)](https://github.com/ShanHaiFish/dsh-answer-me-with-html/releases)
+[![CI](https://github.com/ShanHaiFish/dsh-answer-pages/actions/workflows/test.yml/badge.svg)](https://github.com/ShanHaiFish/dsh-answer-pages/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/ShanHaiFish/dsh-answer-pages)](https://github.com/ShanHaiFish/dsh-answer-pages/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 把 [Answer me with HTML](https://github.com/QingYunA/answer-me-with-html) 的原生体验带进 DeepSeek Harness（DSH）：模型只写 Markdown 草稿，插件在本地渲染成一页离线 HTML，并把页面放到右侧 Document Preview 里打开。Web 端和桌面端使用同一份插件。
@@ -40,38 +40,38 @@
 - 在 DSH 的 **Plugins** 页 → **Add plugin**，填入：
 
   ```
-  github:ShanHaiFish/dsh-answer-me-with-html
+  github:ShanHaiFish/dsh-answer-pages
   ```
 
 - 或用 CLI：
 
   ```powershell
-  dsh plugin --profile desktop add github:ShanHaiFish/dsh-answer-me-with-html
-  dsh plugin --profile web add github:ShanHaiFish/dsh-answer-me-with-html
+  dsh plugin --profile desktop add github:ShanHaiFish/dsh-answer-pages
+  dsh plugin --profile web add github:ShanHaiFish/dsh-answer-pages
   ```
 
 本地开发安装（无需联网，适合调试本仓库）：
 
-- Plugins 页 → Add plugin，填入本目录的绝对路径，例如 `F:\path\to\dsh-answer-me-with-html`；
-- 或 CLI：`dsh plugin --profile desktop add "F:\path\to\dsh-answer-me-with-html"`。
+- Plugins 页 → Add plugin，填入本目录的绝对路径，例如 `F:\\path\\to\\dsh-answer-pages`；
+- 或 CLI：`dsh plugin --profile desktop add "F:\\path\\to\\dsh-answer-pages"`。
 
-安装后新开一个会话，问一个适合画图解释的问题（例如“解释 TCP 三次握手”），模型会调用 `answer_me_with_html`，会话中出现页面卡片。发布页见 [Releases](https://github.com/ShanHaiFish/dsh-answer-me-with-html/releases)。
+安装后新开一个会话，问一个适合画图解释的问题（例如“解释 TCP 三次握手”），模型会调用 `answer_me_with_html`，会话中出现页面卡片。发布页见 [Releases](https://github.com/ShanHaiFish/dsh-answer-pages/releases)。
 
-> 不要同时安装上游 `answer-me-with-html` 和我们这个插件，否则会出现两份同名 skill。二选一。
+> 上游也有一个 DSH 使用同一渲染器的 skill 包（npm `dsh-answer-me-with-html`，由他人维护）。本项目已改名并重写了 skill，两者不要同时启用，避免同一渲染出现两种用法。
 
 ## 使用
 
-正常提问即可；模型根据 `answer-me-with-html` skill 判断是否值得出页面。也可以直接说“用 HTML 解释 TCP 三次握手”。
+正常提问即可；模型根据 `answer-pages` skill 判断是否值得出页面。也可以直接说“用 HTML 解释 TCP 三次握手”。
 
 生成的页面路径会作为工具卡和回复末尾的链接出现，点击后在右侧 Document Preview 打开。页面自带的主题切换、面板评论、`ask` 决策和 Reply 按钮保留了上游的行为；能否运行页面内脚本取决于 DSH 的 Coding Tools 设置，静态阅读不受影响。
 
 ## 配置
 
-当前通过 profile 的 `cordis.patch.yml` 覆盖 `answer-me-with-html` 行的 `config`：
+当前通过 profile 的 `cordis.patch.yml` 覆盖 `answer-pages` 行的 `config`：
 
 ```yaml
-- id: answer-me-with-html
-  name: dsh-answer-me-with-html
+- id: answer-pages
+  name: dsh-answer-pages
   config:
     outputDir: ''          # 空 = <workspace>/.dsh/answer-pages；也可填绝对路径
     theme: auto            # auto | blueprint | shadcn | paper | 已安装主题
@@ -134,7 +134,7 @@ node scripts/sync-upstream.mjs v0.5.11
 2. 确认 `files` 包含 `lib/`、`skill/`、`locale/`、`icon.svg`、`cordis.patch.yml` 和许可文件；
 3. `npm publish --access public`。
 
-发布后即可用 `dsh plugin --profile <name> add dsh-answer-me-with-html` 安装。
+发布后即可用 `dsh plugin --profile <name> add dsh-answer-pages` 安装。
 
 
 ## 许可
@@ -142,3 +142,5 @@ node scripts/sync-upstream.mjs v0.5.11
 本项目代码：MIT，见 [LICENSE](LICENSE)。
 
 内置的 Answer me with HTML skill 与渲染器：MIT，版权归上游作者，见 [LICENSE-answer-me-with-html](LICENSE-answer-me-with-html)。第三方依赖（marked、dagre、temml、Bangers 字体）声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+
